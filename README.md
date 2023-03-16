@@ -45,6 +45,7 @@ zabbix.vm.box = "**centos/8**"
 If needed because of your local configuration just modify the **host port:**
 
 zabbix.vm.network "forwarded_port", **guest: 80 , host: 80**
+
 zabbix.vm.network "forwarded_port", **guest: 8080 , host: 8080**
 
 zabbix.vm.network "forwarded_port", **guest: 3000 , host: 3000**
@@ -52,10 +53,13 @@ zabbix.vm.network "forwarded_port", **guest: 3000 , host: 3000**
 zabbix.vm.network "forwarded_port", **guest: 9090 , host: 9090**
 
 zabbix.vm.network "forwarded_port", **guest: 3306 , host: 3306**
+
 zabbix.vm.network "forwarded_port", **guest: 5432 , host: 5432**
 
 zabbix.vm.network "forwarded_port", **guest: 10050 , host: 10050**
+
 zabbix.vm.network "forwarded_port", **guest: 10051 , host: 10051**
+
 zabbix.vm.network "forwarded_port", **guest: 10052 , host: 10052**
 
 ## bootstrap.sh configuration
