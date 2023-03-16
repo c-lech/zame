@@ -26,44 +26,46 @@ At the end you should see something like the following according webserver and d
 
 ## Vagrantfile configuration
 
-In **Vagrantfile** you can set your preferences in this line:
+**You can set your preferences**:
 
-zabbix.vm.provision "shell", path: "bootstrap.sh", args: "**apache mysql**"
+> zabbix.vm.provision "shell", path: "bootstrap.sh", args: "**apache mysql**"
 
-> You can choose **apache || nginx** webserver and **mysql || pgsql** db.
-> apache && mysql by **default.**
+You can choose **apache or nginx** webserver and **mysql or pgsql** db.
 
-You can choose OS too:
+apache and mysql by **default.**
 
-zabbix.vm.box = "**centos/8**"
+**You can choose OS too**: 
 
-> Tested with:
+> zabbix.vm.box = "**centos/8**"
+
+Tested with:
 - centos/8
 - almalinux/8
 
-**Ports**
-If needed because of your local configuration just modify the **host port:**
+## **Ports**
 
-zabbix.vm.network "forwarded_port", **guest: 80 , host: 80**
+Just modify the **host port** if needed.
 
-zabbix.vm.network "forwarded_port", **guest: 8080 , host: 8080**
-
-zabbix.vm.network "forwarded_port", **guest: 3000 , host: 3000**
-
-zabbix.vm.network "forwarded_port", **guest: 9090 , host: 9090**
-
-zabbix.vm.network "forwarded_port", **guest: 3306 , host: 3306**
-
-zabbix.vm.network "forwarded_port", **guest: 5432 , host: 5432**
-
-zabbix.vm.network "forwarded_port", **guest: 10050 , host: 10050**
-
-zabbix.vm.network "forwarded_port", **guest: 10051 , host: 10051**
-
-zabbix.vm.network "forwarded_port", **guest: 10052 , host: 10052**
+> zabbix.vm.network "forwarded_port", **guest: 80 , host: 80**
+> 
+> zabbix.vm.network "forwarded_port", **guest: 8080 , host: 8080**
+> 
+> zabbix.vm.network "forwarded_port", **guest: 3000 , host: 3000**
+> 
+> zabbix.vm.network "forwarded_port", **guest: 9090 , host: 9090**
+> 
+> zabbix.vm.network "forwarded_port", **guest: 3306 , host: 3306**
+> 
+> zabbix.vm.network "forwarded_port", **guest: 5432 , host: 5432**
+> 
+> zabbix.vm.network "forwarded_port", **guest: 10050 , host: 10050**
+> 
+> zabbix.vm.network "forwarded_port", **guest: 10051 , host: 10051**
+> 
+> zabbix.vm.network "forwarded_port", **guest: 10052 , host: 10052**
 
 ## bootstrap.sh configuration
 
 You should set timezone properly:
 
-**TIMEZONE**="America/Argentina/Buenos_Aires"
+> **TIMEZONE**="America/Argentina/Buenos_Aires"
