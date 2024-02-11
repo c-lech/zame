@@ -1,5 +1,5 @@
 
-# ZAWE
+# ZAME
 
 ## _Zabbix Awesome Monitoring Environment_
 
